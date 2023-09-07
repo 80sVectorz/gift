@@ -1,7 +1,7 @@
 # GIFT
 Generalized interactive fiction tool
 
-GIFT is a toolkit/library that is meant to offer a generalized foundation for creating text-based interactive experiences. It's a pet project of mine and will probably never be in a finished state.
+GIFT is a toolkit/library that tries to offer a generalized foundation for creating text-based interactive experiences. It's a pet project of mine and will probably never be in a finished state.
 I don't recommend actually using it. I just put up the code for anyone who may be inspired by it.
 
 # Inspiration
