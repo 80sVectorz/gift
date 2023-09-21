@@ -1,6 +1,7 @@
 # Brainstorm for generalized command interpretation and verb implementation
 
 ## Examples of different inputs
+```
 Take the apple.
 
 Consume the juicy apple.
@@ -16,9 +17,11 @@ Enter the door.
 Chop the tree down using the axe.
 
 Use the axe to chop the tree down.
+```
 
 ### Break down
 
+```
 Take the apple -> **[verb] [junk] [object reference]**
 
 Consume the red apple -> **[verb] [junk] [filter] [object reference]**
@@ -36,11 +39,11 @@ Chop the tree down using the axe -> **[verb] [junk] [object reference] [verb spe
 Use the axe to chop the tree down -> **[reversed verb modifier] [junk] [object reference] [reversed verb modifier split] [verb] [junk] [object reference] [verb specific junk]**
 
 Place the candle on the table -> **[verb] [junk] [object reference] [verb specific split] [junk] [object/surface reference]**
-
+```
 ### Filtered by removing junk
 If we remove all junk words the sentence should still work. Removing the junk is done by checking if a word is in the junk list which mostly includes 'the' in this case. Or if the word is in the verbs junk list. Verbs should be easy to find by checking if a word is in the verb list.
 Preferably we should be able to type already filtered sentences and interpret them as normal. So typing "Take apple." should work just as well as "Take the apple".
-
+```
 Take apple -> **[verb] [object reference]**
 
 Consume red apple -> **[verb] [filter] [object reference]**
@@ -58,7 +61,7 @@ Chop tree using axe -> **[verb] [object reference] [verb modifier] [object refer
 Use axe to chop tree -> **[reversed verb modifier] [object reference] [reversed verb modifier split] [verb] [object reference]**
 
 Place candle on table -> **[verb] [object reference] [verb specific split] [object/surface reference]**
-
+```
 ### Observations
 
 In all the examples the verbs we find they can be reduced into one form. Which is:
@@ -83,7 +86,7 @@ The same system could be used to give weapons a 'sharp' trait that can be useful
 The way the program chooses would be defined in the verb it self.
 
 #### "Eat it"
-Eat it? Eat what? A common word used in the english language is 'it' computers have a struggle with this word. 'it' can refer to any previous mentioned noun.
+Eat it? Eat what? A common word used in the english language is 'it' computers struggle with this word. 'it' can refer to any previous mentioned noun.
 An interesting example is: "I spread a cloth on the table in order to protect it". 
 Obviously 'it' refers to the table but you need to know what a cloth is.
 Because you have experience with table cloths and/or reality you can infer that the 'it' refers to the table using your understanding of the world.
